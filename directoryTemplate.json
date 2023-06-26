@@ -1,0 +1,17 @@
+[
+  {
+    "name": "main.js"
+  },
+  {
+    "name": "polyfill.dll.js"
+  },
+  {
+    "name": "polyfill.manifest.json"
+  },
+  {
+    "name": "react.dll.js"
+  },
+  {
+    "name": "react.manifest.json"
+  }
+]
