@@ -3,7 +3,7 @@ import nodeExternals from "webpack-node-externals";
 import { Configuration } from "webpack";
 
 const config: Configuration = {
-	entry: { main: "./src/index.ts", cli: "./src/cli.ts" },
+	entry: { index: "./src/index.ts", cli: "./src/cli.ts" },
 	target: "node",
 	externals: [nodeExternals()],
 	module: {

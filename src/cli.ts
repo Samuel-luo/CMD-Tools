@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import inquirer from "inquirer";
-import { spawn } from "child_process";
+import plugins from "./tool-plugins";
+
+import type { Answers } from "inquirer";
 
 const ques = [
 	{
@@ -9,13 +11,19 @@ const ques = [
 		message: "choose one tool you want to execute",
 		choices: ["print-directory-structure"],
 	},
-];
+	{
+		when: (res: any) => res["select-tool"] === "print-directory-structure",
+		type: "input",
+		name: "dir-path",
+		message: "input your file path:",
+		default: "./",
+	},
+] as const;
 
 inquirer
 	.prompt(ques)
-	.then((res) => {
-		spawn("node", [`./tool-plugins/${res["select-tool"]}.js`], {
-			stdio: "inherit",
-		});
+	.then(async (res: Answers) => {
+		const handler = plugins[res["select-tool"]] || (() => {});
+		await handler(res);
 	})
 	.catch((err) => console.log(err));

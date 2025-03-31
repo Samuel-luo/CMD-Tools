@@ -2,7 +2,7 @@
 	"name": "@samuelluo/cmd-tools",
 	"version": "1.0.0",
 	"description": "tools project",
-	"main": "dist/main.js",
+	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"bin": {
 		"cmd-tools": "./dist/cli.js"
@@ -18,8 +18,10 @@
 	"devDependencies": {
 		"@types/inquirer": "^9.0.7",
 		"@types/node": "^22.13.14",
+		"@types/webpack-node-externals": "^3.0.4",
 		"shebang-loader": "^0.0.1",
 		"ts-loader": "^9.5.2",
+		"ts-node": "^10.9.2",
 		"typescript": "^5.8.2",
 		"webpack": "^5.98.0",
 		"webpack-cli": "^6.0.1",
