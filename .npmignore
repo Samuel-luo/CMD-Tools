@@ -1,0 +1,7 @@
+webpack.config.ts
+.prettierignore
+.prettierrc.cjs
+.DS_Store
+
+node_modules/
+test/
