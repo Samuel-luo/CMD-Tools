@@ -1,6 +1,6 @@
 {
 	"name": "@samuelluo/cmd-tools",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "tools project",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -30,6 +30,10 @@
 	"dependencies": {
 		"inquirer": "^8.0.0"
 	},
+	"repository": "https://github.com/Samuel-luo/CMD-Tools",
+	"keywords": [
+		"cmd-tools"
+	],
 	"publishConfig": {
 		"access": "public"
 	}
