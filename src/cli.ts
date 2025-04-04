@@ -24,6 +24,6 @@ inquirer
 	.prompt(ques)
 	.then(async (res: Answers) => {
 		const handler = plugins[res["select-tool"]] || (() => {});
-		await handler(res);
+		console.log(await handler(res));
 	})
 	.catch((err) => console.log(err));
